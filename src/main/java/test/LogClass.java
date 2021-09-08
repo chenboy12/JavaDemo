@@ -10,6 +10,8 @@ public class LogClass {
         logfactory.info("infolog");
     }
 
+    public  String Name;
+
     public void Log4j(){
 
     }
