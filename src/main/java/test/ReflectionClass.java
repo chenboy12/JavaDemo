@@ -10,12 +10,11 @@ import java.lang.reflect.Method;
 @AnnotationClass
 public class ReflectionClass {
     public String Name;
-    public void ReflectionFun(Class cls){
+    public void ReflectionFun(Class cls) throws NoSuchFieldException, NoSuchMethodException {
         System.out.println("getName:"+cls.getName());
         Class cs= LogClass.class;
         Field fl=cs.getField("Name");
-        Method mh=cs.getMethod("LogFun");
+        Method mh=cs.getMethod("Log4j");
         Field fd=cs.getDeclaredField("Name");
-
     }
 }
