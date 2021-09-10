@@ -6,21 +6,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.core.Common;
-import test.EnumClass;
-import test.LogClass;
-import test.ReflectionClass;
-import test.TestClass;
+import test.*;
 
 @SpringBootApplication
 @RestController
 public class JavaDemoApplication {
 
 	public static void main(String[] args) {
-		ReflectionClass reflectionClass=new ReflectionClass();
-		String str="";
-		reflectionClass.ReflectionFun(String.class);
-		reflectionClass.ReflectionFun(str.getClass());
-		reflectionClass.ReflectionFun(Integer.class);
+		Pair<String,Integer,Boolean> One=new Pair<>(String.class,Integer.class,Boolean.class);
+		One.setName("陈博");
+		One.setAge(21);
+		One.setIsTrue(true);
+		System.out.println("姓名："+One.getName()+" 年龄："+One.getAge()+" 性别："+(One.getIsTrue()==true?"男":"女"));
+
+
+//		ReflectionClass reflectionClass=new ReflectionClass();
+//		String str="";
+//		reflectionClass.ReflectionFun(String.class);
+//		reflectionClass.ReflectionFun(str.getClass());
+//		reflectionClass.ReflectionFun(Integer.class);
 		//LogClass logclass=new LogClass();
 		//logclass.LogFun();
 		//TestClass tc=new TestClass();
