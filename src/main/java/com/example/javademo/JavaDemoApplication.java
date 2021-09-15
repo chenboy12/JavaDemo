@@ -52,6 +52,10 @@ public class JavaDemoApplication {
 		SpringApplication.run(JavaDemoApplication.class, args);
 	}
 
+	public static String Change1(Pairs<? super Number> pairs){
+		return "";
+	}
+
 	public static String Change(Pairs<? extends Number> pairs){
 		Number ii=pairs.GetOne();
 		return ii.toString();
