@@ -21,6 +21,16 @@ public class JavaDemoApplication {
 		String str=Change(p);
 		System.out.println(str);
 
+		Super1Class<? extends Number> superclass1=new Super2Class();
+		superclass1.GetAge();
+		superclass1.SetAge(null);
+
+
+
+		Super1Class<? super Integer> super1Classs=new Super1Class<>();
+		super1Classs.SetAge(18);
+
+
 
 
 
