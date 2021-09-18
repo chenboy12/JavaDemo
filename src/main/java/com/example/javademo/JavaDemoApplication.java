@@ -30,6 +30,12 @@ public class JavaDemoApplication {
 		Super1Class<? super Integer> super1Classs=new Super1Class<>();
 		super1Classs.SetAge(18);
 
+		Class cla=String.class;
+		String strs=(String)cla.getDeclaredConstructor().newInstance();
+
+		Class<String> clast=String.class;
+		String strss=clast.getDeclaredConstructor().newInstance();
+
 
 
 
